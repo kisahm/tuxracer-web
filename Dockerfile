@@ -1,10 +1,10 @@
-FROM ubuntu:18.04
+FROM ubuntu:24.04
 LABEL maintainer "David Cooper <david@dtcooper.com>"
 
 # Use serviceable environment variables
 ENV RESOLUTION=800x600
 ENV PASSWORD=
-ENV VERBOSE=
+ENV VERBOSE=1
 ENV ICECAST=
 
 EXPOSE 80
@@ -33,7 +33,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Install noVNC
-RUN wget -qO - https://github.com/novnc/noVNC/archive/v1.1.0.tar.gz \
+RUN wget -qO - https://github.com/novnc/noVNC/archive/v1.5.0.tar.gz \
         | tar xz --strip-components=1 -C /var/www/html \
     && ln -s /var/www/html/vnc_lite.html /var/www/html/index.html
 
