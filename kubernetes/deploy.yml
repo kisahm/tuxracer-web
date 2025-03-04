@@ -27,7 +27,7 @@ spec:
           - name: RESOLUTION
             value: "800x600"
           - name: PASSWORD
-            value: "live"
+            value: ""
           - name: VERBOSE
             value: "0"
         ports: 
