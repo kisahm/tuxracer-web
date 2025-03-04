@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: tuxracer
-        image: docker.io/kisahm/tuxracer-web
+        image: docker.io/kisahm/tuxracer-web:v0.3
         env: 
           - name: RESOLUTION
             value: "800x600"
