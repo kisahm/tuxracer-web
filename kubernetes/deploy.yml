@@ -85,10 +85,10 @@ data:
     location / {
           proxy_http_version 1.1;
           # x11vnc supports websockets out of the box
-          proxy_pass http://tuxracer:5900/;
+          proxy_pass http://tuxracer:80/;
           proxy_set_header Upgrade $http_upgrade;
           proxy_set_header Connection "upgrade";
-          proxy_read_timeout 61s;
+          proxy_read_timeout 5s;
           proxy_buffering off;
         }
     } 
