@@ -30,7 +30,7 @@ if [ ! -e /dev/snd -a -z "$PULSE_SERVER" ]; then
         pulseaudio -n -v \
             --load=module-native-protocol-unix \
             --load=module-always-sink \
-            --log-target=file:/var/log/pulseaudio.log \
+            --log-target=file:/dev/stdout \
             --start
 
         if [ "$ICECAST" ]; then

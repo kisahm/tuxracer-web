@@ -20,6 +20,20 @@ using [noVNC](http://novnc.com/) over a
 
 Why? _Because you can._ ¯\\\_(ツ)\_/¯
 
+## Running - on Kubernetes
+Load our kube-context and apply the manifest:
+
+```
+kubectl apply -f kubernetes/deploy.yml
+```
+
+Check the service to get the loadbalancer address:
+
+```
+kubectl get svc -n tuxracer
+```
+
+
 ## Running - It's Easy Peasy Lemon Squeezy!
 
 Make sure you have [Docker](https://www.docker.com/) installed, then run the
